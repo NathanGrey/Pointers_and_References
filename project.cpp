@@ -2,19 +2,21 @@
 
 using namespace std;
 
-void FunctionOne ()
+void FunctionOne () // Takes a pointer and returns an integer
 {
-	int Value = 5;
-	int* pPtr = &Value;
-	cout << "Number is:" << *pPtr << endl;
+	int Value = 5; // Declaration
+	int* pPtr = &Value; // Pointer to Value
+	cout << "Number is:" << *pPtr << endl; // Outputs integer
 }
 
-void FunctionTwo()
+void FunctionTwo() // Takes a pointer and refe
 {
 	int SomeInt = 3;
+	void* ptr = &SomeInt;
+
 	int &Ref = SomeInt;
-	cout << "SomeChar Value: " << SomeInt << endl;
-	Ref = 20;
+	cout << "SomeInt Value: " << SomeInt << endl;
+	Ref = 'a';
 	cout << "Ref Value: " << Ref << endl;
 }
 
