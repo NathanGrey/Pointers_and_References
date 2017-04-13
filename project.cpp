@@ -2,65 +2,64 @@
 
 using namespace std;
 
-void main()
-[
-char theBestChar;
-char* pPartOne = &theBestChar;
-
-cout << "theBestChar value:" << theBestChar << endl;
-cout << "pPartOne value:" << pPartOne << endl;
-cout << "pPartOne deferenced:" << *pPartOne << endl;
-
-int theBestInt;
-int* pPartTwo = &theBestInt;
-
-cout << "theBestInt value:" << theBestInt << endl;
-cout << "pPartTwo value:" << pPartTwo << endl;
-cout << "pPartTwo deferenced:" << *pPartTwo << endl;
-
-]
-
-int FunctionOne ()
-[
-	int Value = 5
-	int *pPtr = &Value;
-	cout << *pPtr;
-]
-
-void FunctionTwo()
-[
-	char Char = 'a'
-	int *pPtr = &Char;
-	cout << *pPtr;
-
-]
-
-void Swap()
+void FunctionOne ()
 {
-
-
+	int Value = 5;
+	int* pPtr = &Value;
+	cout << "Number is:" << *pPtr << endl;
 }
 
-int To1337Speak()
-[
+void FunctionTwo()
+{
+	int SomeInt = 3;
+	int &Ref = SomeInt;
+	cout << "SomeChar Value: " << SomeInt << endl;
+	Ref = 20;
+	cout << "Ref Value: " << Ref << endl;
+}
 
+void Swap(int& i, int& j) {
+    int t = i;
+    i = j;
+    j = t;
+}
 
+void To1337Speak()
+{
+	char a[] = "aetilogs";
+	char b[] = "437!1095";
 
-]
-/*[
-	int theBestArray[5] = {2, 4, 9, 900, -1};
-	int* pPointer = theBestArray;
+	char* aptr = a, *bptr = b;
 
-	for (int i = 0; i < 4; ++i)
-	{
-		cout << *(theBestArray + i) << endl;
-	}
-	system("pause");
+	cout << "[" << aptr << "," << bptr << "]\n";
+	swap(aptr, bptr);
+	cout << "[" << aptr << "," << bptr << "]\n";
+}
 
+int main()
+{
 
-	char someString[] = "The Elements will destroy you!";
-	for (int i = 0; i < strlen(someString); ++i)
-		[
-		cout << someString[i] << endl;
-		]
-]*/
+	char theBestChar = 'y';
+	char* pPartOne = &theBestChar;
+
+	cout << "theBestChar value:" << theBestChar << endl;
+	cout << "pPartOne value:" << pPartOne << endl;
+	cout << "pPartOne deferenced:" << *pPartOne << endl;
+
+	int theBestInt = 4;
+	int* pPartTwo = &theBestInt;
+
+	cout << "theBestInt value:" << theBestInt << endl;
+	cout << "pPartTwo value:" << pPartTwo << endl;
+	cout << "pPartTwo deferenced:" << *pPartTwo << endl;
+
+	FunctionOne();
+	FunctionTwo();
+	To1337Speak();
+
+	int a = 23, b = 47;
+    cout << "Before. a: " << a << ", b: " << b << "\n";
+    swap(a, b);
+    cout << "After.  a: " << a << ", b: " << b << "\n";
+    return 0;
+}
