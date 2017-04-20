@@ -1,6 +1,6 @@
 #include <iostream>
 
-using namespace std;
+using namespace std; // Using Standard namespace
 
 void FunctionOne () // Takes a pointer and returns an integer
 {
@@ -9,7 +9,7 @@ void FunctionOne () // Takes a pointer and returns an integer
 	cout << "Number is:" << *pPtr << endl; // Outputs integer
 }
 
-void FunctionTwo() // Takes a pointer and refe
+void FunctionTwo() // Takes a pointer and refences a char
 {
 	int SomeInt = 3;
 	void* ptr = &SomeInt;
@@ -20,13 +20,13 @@ void FunctionTwo() // Takes a pointer and refe
 	cout << "Ref Value: " << Ref << endl;
 }
 
-void Swap(int& i, int& j) {
+void Swap(int& i, int& j) { // Makes integers swap orders
     int t = i;
     i = j;
     j = t;
 }
 
-void To1337Speak()
+void To1337Speak() // Function to convert to 1337Speak
 {
 	char a[] = "aetilogs";
 	char b[] = "437!1095";
@@ -38,7 +38,7 @@ void To1337Speak()
 	cout << "[" << aptr << "," << bptr << "]\n";
 }
 
-int main()
+int main() // Main Program
 {
 
 	char theBestChar = 'y';
@@ -55,11 +55,11 @@ int main()
 	cout << "pPartTwo value:" << pPartTwo << endl;
 	cout << "pPartTwo deferenced:" << *pPartTwo << endl;
 
-	FunctionOne();
-	FunctionTwo();
-	To1337Speak();
+	FunctionOne(); // Calls to FunctionOne
+	FunctionTwo(); // Calls to FunctionTwo
+	To1337Speak(); // Calls to 1337Speak
 
-	int a = 23, b = 47;
+	int a = 23, b = 47; // Swaps the integers
     cout << "Before. a: " << a << ", b: " << b << "\n";
     swap(a, b);
     cout << "After.  a: " << a << ", b: " << b << "\n";
