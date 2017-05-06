@@ -24,7 +24,7 @@ void Swap2(int &pFirstNumber, int &pSecondNumber) // References the points to as
 	pSecondNumber = TemporaryNumber;
 }
 
-void To1337Speak(char *pString)
+void To1337Speak(char *pString) // Function to loop and change the C-style string to 1337Speak
 {
 	char* ptr = pString;
 
