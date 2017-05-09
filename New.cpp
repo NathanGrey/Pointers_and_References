@@ -118,12 +118,3 @@ int main() // Main program
 system("pause");
 return 0;
 }
-/*
-What is the difference between a pointer and a reference?
-- Pointers point to a variable where references point to pointers and can change their values.
-What does it mean to dereference a variable?
-- To dereference a varaible means to reference it and assign a new value to it.
-What is a null pointer?
-- A null pointer is a pointer that points to nothing.
-Describe pointers to a friend or family member and share reactions from the conversation here.
-- I described them to my friend that wants to get into computer science and they were a little confused but kind of got it!*/
